@@ -1,35 +1,70 @@
-# Assessement
-This is an assessment project where l was supposed to consume the provided endpoints in the question and l used React.js and Spring Boot to do so..
-Because of the limited time l had l could not solve one error that was showing on my react.js froend page. But basically l used the react.js to consume the provided endpoints. First step is to create the react.js folder, install the depencies which you will be using for my case some of the dependencies l was making use of are axiom, https, util etc. l then created the Login, Signup, Allproducts and AllCurrencies in the src folder and to link the pages l created the Home.js page which has all the links and had to install the react-route-dom dependency which enables the links. So the main code you find it in the src folder which is inside the interview folder which is inside the root folder Assessment. Could not do the backend using springboot because of time but below is what should be done in the backennd: In Sppringboot l use RestTemplate to make Http requests: 
-LOGIN.Java
+# Getting Started with Create React App
 
-import org.springframework.http.HttpEntity;
-import org.springframework.http.HttpHeaders;
-import org.springframework.http.MediaType;
-import org.springframework.http.ResponseEntity;
-import org.springframework.web.client.RestTemplate;
+This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-public class LoginExample {
-  public static void main(String[] args) {
-    RestTemplate restTemplate = new RestTemplate();
+## Available Scripts
 
-    HttpHeaders headers = new HttpHeaders();
-    headers.setContentType(MediaType.APPLICATION_JSON);
+In the project directory, you can run:
 
-    String url = "https://app.signalgas.io/api/v1/customer/signin";
-    String requestBody = "{\"email\":\"<email-here>\",\"password\":\"<password-here>\"}";
-    HttpEntity<String> request = new HttpEntity<>(requestBody, headers);
+### `npm start`
 
-    ResponseEntity<String> response = restTemplate.postForEntity(url, request, String.class);
-    System.out.println(response.getBody()); // Handle the response body
-  }
-}
+Runs the app in the development mode.\
+Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
+The page will reload when you make changes.\
+You may also see any lint errors in the console.
 
+### `npm test`
 
+Launches the test runner in the interactive watch mode.\
+See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
+### `npm run build`
 
+Builds the app for production to the `build` folder.\
+It correctly bundles React in production mode and optimizes the build for the best performance.
 
+The build is minified and the filenames include the hashes.\
+Your app is ready to be deployed!
 
+See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
+### `npm run eject`
 
+**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+
+If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+
+Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+
+You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+
+## Learn More
+
+You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+
+To learn React, check out the [React documentation](https://reactjs.org/).
+
+### Code Splitting
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+
+### Analyzing the Bundle Size
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+
+### Making a Progressive Web App
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+
+### Advanced Configuration
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+
+### Deployment
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+
+### `npm run build` fails to minify
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
